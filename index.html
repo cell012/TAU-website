@@ -104,15 +104,15 @@
         }
         .qr-image {
             width: 350px; 
-            margin-right: 70px;
-            height: 350px;/* Adjust the size as needed */
+            margin-right: 40px;
+            height: 350px; /* Adjust the size as needed */
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .download-qr-btn {
             margin-top: 10px;
             padding: 10px 20px;
-            margin-right: 70px;
+            margin-right: 40px;
             background-color: #008080;
             color: white;
             text-decoration: none;
@@ -126,7 +126,7 @@
         .rectangle-image {
             height: 550px; /* Set to match the height of the QR code */
             border-radius: 10px;
-            margin-right: 150px;
+            margin-right: 80px;
         }
 
         /* Features Section */
@@ -248,36 +248,42 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar .logo {
+                font-size: 28px;
+            }
             .hero {
                 flex-direction: column;
                 text-align: center;
+                padding: 50px 20px; /* Reduce padding for smaller screens */
             }
-            .hero-image {
-                margin-top: 40px;
-            }
-            .hero-image img {
-                width: 80%;
-            }
-            .navbar {
-                padding: 15px 20px;
-            }
-            .cta h2 {
-                font-size: 32px;
-            }
-            .cta p {
-                font-size: 18px;
-            }
-            .cta a {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 36px;
             }
             .hero-content p {
                 font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .hero-image {
+                margin-top: 20px; /* Adjust margin for image on smaller screens */
+            }
+            .qr-image {
+                width: 80%; /* Scale QR image down */
+            }
+            .rectangle-image {
+                width: 100%; /* Ensure rectangle image is responsive */
+                height: auto; /* Maintain aspect ratio */
+            }
+            .features {
+                padding: 20px;
+                gap: 15px;
+            }
+            .feature-box {
+                padding: 15px;
             }
             .cta h2 {
                 font-size: 28px;
@@ -288,91 +294,84 @@
             .cta a {
                 font-size: 16px;
             }
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        }
+
+        @media (max-width: 480px) {
             .navbar .nav-buttons {
                 flex-direction: column;
                 gap: 10px;
             }
-            .hero-image img {
-                width: 100%;
-                margin-top: 20px;
+            .hero-content h1 {
+                font-size: 28px; /* Smaller font size for smaller screens */
             }
-            .features {
-                padding: 20px;
-                gap: 10px;
+            .hero-content p {
+                font-size: 14px; /* Smaller font size for smaller screens */
             }
-            .feature-box {
-                padding: 20px;
+            .cta h2 {
+                font-size: 24px; /* Smaller font size */
+            }
+            .cta p {
+                font-size: 14px; /* Smaller font size */
+            }
+            .cta a {
+                font-size: 14px; /* Smaller font size */
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <div class="navbar">
         <div class="logo">TradeAreUs</div>
         <div class="nav-buttons">
-            <!-- <a href="#">Register Now</a>
-            <a href="#">Login</a>
-            <a href="#">Contact</a> -->
+            
         </div>
-    </nav>
+    </div>
+    <div class="navbar-spacing"></div>
 
-    <div class="navbar-spacing"></div> <!-- Spacer for navbar -->
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <div class="hero">
         <div class="hero-content">
-            <h1>Your Trusted Platform for Local Tasks</h1>
-            <p>TradeAreUs connects skilled gig workers with top local clients. Get started with finding your perfect match today.</p>
-            <a href="#" class="cta-btn">Download Now</a>
+            <h1>Welcome to TradeAreUs</h1>
+            <p>Your one-stop solution for task searching and secure payments.</p>
+            <a href="#cta" class="cta-btn">Download</a>
         </div>
         <div class="hero-image">
             <div class="qr-container">
                 <img src="qr.png" alt="QR Code" class="qr-image">
-                <a href="path/to/your/app/download" class="download-qr-btn">Scan to Download</a>
+                <a href="download-qr-code" class="download-qr-btn">Download QR Code</a>
             </div>
-            <img src="Rectangle (22).png" alt="TradeAreUs Mobile App" class="rectangle-image">
+            <img src="rectangle (22).png" alt="Rectangle Image" class="rectangle-image">
         </div>
-    </section>
+    </div>
 
-    <!-- Features Section -->
-    <section class="features">
+    <div class="features" id="features">
         <div class="feature-box">
-            <img src="4.png" alt="Feature 1">
+            <img src="2.png" alt="Feature 1">
             <h3>Tailored Service Matching</h3>
             <p>Discover local gigs and tasks customized just for you. Find opportunities that align with your skills and interests, making tasks hunting more efficient and enjoyable.</p>
         </div>
         <div class="feature-box">
-            <img src="2.png" alt="Feature 2">
+            <img src="3.png" alt="Feature 2">
             <h3>Trusted Connections</h3>
             <p>Connect with trusted clients and gig workers within your community.</p>
         </div>
         <div class="feature-box">
-            <img src="3.png" alt="Feature 3">
+            <img src="4.png" alt="Feature 3">
             <h3>E-Wallet Integration</h3>
             <p>Secure payments and reliable task management.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Enhanced Call-to-Action Section -->
-    <section class="cta">
+    <div class="cta" id="cta">
         <div class="cta-content">
             <h2>Join the TradeAreUs Community</h2>
-            <p>Whether you’re looking for tasks or workers, we have something for everyone.</p>
-            <a href="#">Get Started</a>
+            <p>Whether you’re looking for tasks or gig workers, we have something for everyone.</p>
+            <a href="#signup">Get Started</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 TradeAreUs. All Rights Reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
-
+    <div class="footer" id="footer">
+        <p>&copy; 2024 TradeAreUs. All rights reserved.</p>
+        <p>Follow us on <a href="#">Social Media</a></p>
+    </div>
 </body>
 </html>
