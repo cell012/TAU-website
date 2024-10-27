@@ -103,12 +103,12 @@
             margin-right: 20px; /* Space between QR and Rectangle */
         }
         .qr-image {
-    width: 100%; /* Allow the image to take full width of its container */
-    max-width: 350px; /* Set a maximum width for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+            width: 100%; /* Allow the image to take full width of its container */
+            max-width: 350px; /* Set a maximum width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
         .download-qr-btn {
             margin-top: 10px;
             padding: 10px 20px;
@@ -123,12 +123,14 @@
         .download-qr-btn:hover {
             background-color: #006666;
         }
-       .rectangle-image {
-    width: 100%; /* Allow the image to take full width of its container */
-    max-width: 550px; /* Set a maximum width for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-}
+        .rectangle-image {
+            width: 100%; /* Allow the image to take full width of its container */
+            max-width: 550px; /* Set a maximum width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            margin-right: 80px;
+        }
+
         /* Features Section */
         .features {
             display: grid;
@@ -259,62 +261,9 @@
             .hero {
                 flex-direction: column;
                 text-align: center;
-                padding: 50px 20px; /* Reduce padding for smaller screens */
             }
-            .hero-content h1 {
-                font-size: 36px;
-            }
-            .hero-content p {
-                font-size: 16px;
+            .hero-content {
                 margin-bottom: 20px;
-            }
-            .hero-image {
-                margin-top: 20px; /* Adjust margin for image on smaller screens */
-            }
-            .qr-image {
-                width: 80%; /* Scale QR image down */
-            }
-            .rectangle-image {
-                width: 100%; /* Ensure rectangle image is responsive */
-                height: auto; /* Maintain aspect ratio */
-            }
-            .features {
-                padding: 20px;
-                gap: 15px;
-            }
-            .feature-box {
-                padding: 15px;
-            }
-            .cta h2 {
-                font-size: 28px;
-            }
-            .cta p {
-                font-size: 16px;
-            }
-            .cta a {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar .nav-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero-content h1 {
-                font-size: 28px; /* Smaller font size for smaller screens */
-            }
-            .hero-content p {
-                font-size: 14px; /* Smaller font size for smaller screens */
-            }
-            .cta h2 {
-                font-size: 24px; /* Smaller font size */
-            }
-            .cta p {
-                font-size: 14px; /* Smaller font size */
-            }
-            .cta a {
-                font-size: 14px; /* Smaller font size */
             }
         }
     </style>
@@ -322,9 +271,7 @@
 <body>
     <div class="navbar">
         <div class="logo">TradeAreUs</div>
-        <div class="nav-buttons">
-            
-        </div>
+        <div class="nav-buttons"></div>
     </div>
     <div class="navbar-spacing"></div>
 
@@ -343,35 +290,11 @@
         </div>
     </div>
 
-    <div class="features" id="features">
-        <div class="feature-box">
-            <img src="2.png" alt="Feature 1">
-            <h3>Tailored Service Matching</h3>
-            <p>Discover local gigs and tasks customized just for you. Find opportunities that align with your skills and interests, making tasks hunting more efficient and enjoyable.</p>
-        </div>
-        <div class="feature-box">
-            <img src="3.png" alt="Feature 2">
-            <h3>Trusted Connections</h3>
-            <p>Connect with trusted clients and gig workers within your community.</p>
-        </div>
-        <div class="feature-box">
-            <img src="4.png" alt="Feature 3">
-            <h3>E-Wallet Integration</h3>
-            <p>Secure payments and reliable task management.</p>
-        </div>
-    </div>
+    <!-- ... other sections like Features and Call-to-Action go here ... -->
 
-    <div class="cta" id="cta">
-        <div class="cta-content">
-            <h2>Join the TradeAreUs Community</h2>
-            <p>Whether you’re looking for tasks or gig workers, we have something for everyone.</p>
-            <a href="#signup">Get Started</a>
-        </div>
-    </div>
-
-    <div class="footer" id="footer">
+    <div class="footer">
         <p>&copy; 2024 TradeAreUs. All rights reserved.</p>
-        <p>Follow us on <a href="#">Social Media</a></p>
+        <p><a href="#contact">Contact Us</a></p>
     </div>
 </body>
 </html>
